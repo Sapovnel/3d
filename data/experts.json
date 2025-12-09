@@ -1,0 +1,32 @@
+[
+  {
+    "id": "alexa",
+    "name": "Alexa Morreti",
+    "title": "Lead 3D Fashion Designer",
+    "photo": "/images/experts/alexa.jpg",
+    "bio": "Alexa is a specialized 3D fashion designer with over 8 years of experience in digital garment creation. Her expertise spans from haute couture to ready-to-wear collections, with a focus on realistic cloth simulation and texture detail.",
+    "skills": ["3D Modeling", "Cloth Simulation", "Texturing", "Marvelous Designer", "Blender"],
+    "tools": ["Marvelous Designer", "Blender", "Substance Painter", "CLO 3D"],
+    "projects": ["dress001", "coat004", "formalwear022"]
+  },
+  {
+    "id": "marcus",
+    "name": "Marcus Chen",
+    "title": "Technical 3D Specialist",
+    "photo": "/images/experts/marcus.jpg",
+    "bio": "Marcus specializes in technical 3D development and optimization. He brings garments from design to game-ready assets, ensuring compatibility across platforms and maintaining visual fidelity.",
+    "skills": ["Technical Modeling", "Asset Optimization", "Game Engine Integration", "Rigging"],
+    "tools": ["Blender", "Maya", "Houdini", "Unity", "Unreal Engine"],
+    "projects": ["sportswear050", "gaming_outfit001", "vr_collection012"]
+  },
+  {
+    "id": "sofia",
+    "name": "Sofia Rodriguez",
+    "title": "Concept & Rendering Artist",
+    "photo": "/images/experts/sofia.jpg",
+    "bio": "Sofia combines artistic vision with technical rendering expertise. She creates stunning photorealistic previews of garments, perfect for e-commerce and marketing campaigns.",
+    "skills": ["Concept Art", "High-End Rendering", "Lighting Design", "Photography"],
+    "tools": ["Blender", "V-Ray", "Octane Render", "Photoshop", "Adobe Substance"],
+    "projects": ["luxury_collection008", "campaign_imagery015", "showcase_renders020"]
+  }
+]

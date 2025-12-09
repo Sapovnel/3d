@@ -1,0 +1,133 @@
+[
+  {
+    "id": "dress001",
+    "expertId": "alexa",
+    "title": "Summer Dress Concept",
+    "description": "A realistic 3D summer dress created in Marvelous Designer with detailed cloth simulation. Perfect for e-commerce preview and design iteration.",
+    "images": [
+      "/images/projects/dress001-1.jpg",
+      "/images/projects/dress001-2.jpg",
+      "/images/projects/dress001-3.jpg"
+    ],
+    "process": "This design began with hand-sketched concepts, evolved through multiple iterations in Marvelous Designer with real fabric physics, and was finalized with professional lighting and rendering in Blender.",
+    "tools": ["Marvelous Designer", "Blender", "Substance Painter"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "coat004",
+    "expertId": "alexa",
+    "title": "Winter Coat Collection",
+    "description": "Detailed 3D winter coat with realistic fabric draping and weathering effects. Demonstrates advanced texturing and cloth simulation techniques.",
+    "images": [
+      "/images/projects/coat004-1.jpg",
+      "/images/projects/coat004-2.jpg"
+    ],
+    "process": "Created using advanced cloth simulation to capture natural fabric behavior. Multiple material layers were combined for realistic wrinkles and surface detail.",
+    "tools": ["Marvelous Designer", "Substance Painter", "Blender"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "formalwear022",
+    "expertId": "alexa",
+    "title": "Formal Gown Series",
+    "description": "High-end formal wear 3D models featuring intricate detailing, complex draping, and luxurious material rendering.",
+    "images": [
+      "/images/projects/formalwear022-1.jpg",
+      "/images/projects/formalwear022-2.jpg",
+      "/images/projects/formalwear022-3.jpg"
+    ],
+    "process": "Each gown was meticulously crafted to capture the elegance of formal wear, with special attention to fabric flow and light interaction.",
+    "tools": ["CLO 3D", "Blender", "V-Ray"],
+    "year": 2024,
+    "status": "completed"
+  },
+  {
+    "id": "sportswear050",
+    "expertId": "marcus",
+    "title": "Athletic Wear Optimization",
+    "description": "Game-ready athletic wear assets optimized for real-time rendering in game engines while maintaining visual quality.",
+    "images": [
+      "/images/projects/sportswear050-1.jpg",
+      "/images/projects/sportswear050-2.jpg"
+    ],
+    "process": "Designed for performance and visual fidelity. Geometry was optimized for real-time engines without sacrificing detail. Rigging ensures smooth animation.",
+    "tools": ["Blender", "Maya", "Unity"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "gaming_outfit001",
+    "expertId": "marcus",
+    "title": "Game Character Outfit",
+    "description": "Complete 3D outfit for game character, fully rigged and optimized for Unreal Engine.",
+    "images": [
+      "/images/projects/gaming_outfit001-1.jpg",
+      "/images/projects/gaming_outfit001-2.jpg"
+    ],
+    "process": "Built specifically for game integration with attention to polygon count, texture resolution, and animation compatibility.",
+    "tools": ["Blender", "Houdini", "Unreal Engine"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "vr_collection012",
+    "expertId": "marcus",
+    "title": "VR Fashion Experience",
+    "description": "Fashion collection designed for immersive VR experiences with real-time rendering and interaction capabilities.",
+    "images": [
+      "/images/projects/vr_collection012-1.jpg",
+      "/images/projects/vr_collection012-2.jpg",
+      "/images/projects/vr_collection012-3.jpg"
+    ],
+    "process": "Created with VR constraints in mind, ensuring smooth performance while delivering immersive visual quality.",
+    "tools": ["Blender", "Unity", "Maya"],
+    "year": 2024,
+    "status": "completed"
+  },
+  {
+    "id": "luxury_collection008",
+    "expertId": "sofia",
+    "title": "Luxury Collection Renders",
+    "description": "High-end photorealistic renders of luxury fashion collection for brand marketing and e-commerce.",
+    "images": [
+      "/images/projects/luxury_collection008-1.jpg",
+      "/images/projects/luxury_collection008-2.jpg",
+      "/images/projects/luxury_collection008-3.jpg"
+    ],
+    "process": "Each piece was rendered with professional lighting setups and post-processing to achieve photorealistic quality suitable for luxury marketing.",
+    "tools": ["Blender", "V-Ray", "Photoshop"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "campaign_imagery015",
+    "expertId": "sofia",
+    "title": "Marketing Campaign Imagery",
+    "description": "Collection of campaign-ready images featuring 3D garments in styled environments for advertising and social media.",
+    "images": [
+      "/images/projects/campaign_imagery015-1.jpg",
+      "/images/projects/campaign_imagery015-2.jpg",
+      "/images/projects/campaign_imagery015-3.jpg"
+    ],
+    "process": "Designed to tell a story and evoke emotion while showcasing the garments. Careful composition and color grading for brand consistency.",
+    "tools": ["Blender", "Octane Render", "Adobe Creative Suite"],
+    "year": 2025,
+    "status": "completed"
+  },
+  {
+    "id": "showcase_renders020",
+    "expertId": "sofia",
+    "title": "Product Showcase Series",
+    "description": "Studio-style product photography recreated with 3D rendering for consistent, high-quality e-commerce imagery.",
+    "images": [
+      "/images/projects/showcase_renders020-1.jpg",
+      "/images/projects/showcase_renders020-2.jpg"
+    ],
+    "process": "Each render mimics professional product photography with controlled lighting and neutral backgrounds for maximum product focus.",
+    "tools": ["Blender", "V-Ray", "Substance Painter"],
+    "year": 2024,
+    "status": "completed"
+  }
+]
