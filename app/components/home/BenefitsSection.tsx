@@ -64,8 +64,15 @@ export default function BenefitsSection() {
                     />
                   </div>
                 ) : (
-                  <div className="h-[60vh] min-h-[500px] bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-gray-200 flex items-center justify-center shadow-lg">
-                    <p className="text-gray-400 text-lg">[{benefit.visual}]</p>
+                  <div className="h-[60vh] min-h-[500px] bg-linear-to-br from-gray-900 via-gray-800 to-black rounded-2xl border border-gray-300 flex items-center justify-center shadow-xl overflow-hidden relative">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%),radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
+                    <div className="relative z-10 text-center px-8">
+                      <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-linear-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-2xl">
+                        <span className="text-white text-4xl font-bold">{benefit.id}</span>
+                      </div>
+                      <p className="text-white text-2xl font-semibold mb-3">{benefit.title}</p>
+                      <p className="text-gray-300 text-lg">{benefit.description}</p>
+                    </div>
                   </div>
                 )}
               </div>

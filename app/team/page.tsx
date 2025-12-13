@@ -337,7 +337,7 @@ export default function TeamPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member) => (
                 <div key={member.id} className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-gray-400 transition-colors">
-                  <div className="aspect-square bg-gradient-to-br from-purple-50 to-blue-50 rounded-full mb-6 flex items-center justify-center">
+                  <div className="aspect-square bg-linear-to-br from-purple-50 to-blue-50 rounded-full mb-6 flex items-center justify-center">
                     <span className="text-4xl">👤</span>
                   </div>
                   <h3 className="text-2xl font-bold text-black mb-2">{member.name}</h3>

@@ -96,7 +96,7 @@ export default function ServicesGrid() {
                 key={service.id}
                 className="group bg-white rounded-2xl p-10 border-2 border-gray-100 hover:border-gray-300 transition-all duration-300 hover:shadow-xl"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
 
