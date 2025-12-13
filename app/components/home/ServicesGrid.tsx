@@ -77,41 +77,41 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             End-to-end digital fashion solutions to transform your design workflow
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.id}
-                className="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-gray-300 transition-all duration-300 hover:shadow-xl"
+                className="group bg-white rounded-2xl p-10 border-2 border-gray-100 hover:border-gray-300 transition-all duration-300 hover:shadow-xl"
               >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-7 h-7 text-white" strokeWidth={2} />
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
 
-                <h3 className="text-2xl font-bold text-black mb-3">
+                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
-                      <span className="text-gray-400 mr-2">•</span>
+                    <li key={idx} className="flex items-start text-base text-gray-700">
+                      <span className="text-gray-400 mr-3 text-lg">•</span>
                       <span>{feature}</span>
                     </li>
                   ))}
