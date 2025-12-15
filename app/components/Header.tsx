@@ -1,76 +1,107 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { 
+  Home, 
+  Box, 
+  Users, 
+  CreditCard, 
+  Building2, 
+  Mail, 
+  Menu, 
+  X 
+} from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Team', href: '/team' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Enterprise', href: '/enterprise' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Solutions', href: '/solutions', icon: Box },
+    { name: 'Team', href: '/team', icon: Users },
+    { name: 'Pricing', href: '/pricing', icon: CreditCard },
+    { name: 'Enterprise', href: '/enterprise', icon: Building2 },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'py-3 bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200/50' 
+          : 'py-5 bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="text-2xl tracking-tight text-black">
-            <span className="font-light">virtuality</span><span className="font-bold">.fashion</span>
+        <Link href="/" className="flex items-center gap-2 group relative z-50">
+          <div className="text-2xl tracking-tight text-black flex items-center gap-1">
+            <span className="font-light">virtuality</span>
+            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">.fashion</span>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center gap-1 bg-white/50 backdrop-blur-sm px-2 py-1.5 rounded-full border border-gray-200/50 shadow-sm">
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-black hover:bg-white rounded-full transition-all duration-200 group relative overflow-hidden"
+              >
+                <Icon className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" />
+                <span>{link.name}</span>
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-700 w-10 h-10 flex items-center justify-center"
+          className="md:hidden relative z-50 p-2 text-gray-600 hover:text-black transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-            />
-          </svg>
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 px-6 py-4 shadow-md">
-          <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+      {/* Mobile Navigation Overlay */}
+      <div 
+        className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 transition-transform duration-300 md:hidden flex flex-col items-center justify-center ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <nav className="flex flex-col gap-6 w-full max-w-xs px-6">
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-black transition-colors font-medium py-2"
+                className="flex items-center gap-4 text-xl font-medium text-gray-600 hover:text-black transition-colors p-2 rounded-xl hover:bg-gray-50"
                 onClick={() => setIsOpen(false)}
               >
+                <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-white transition-colors">
+                  <Icon className="w-6 h-6" />
+                </div>
                 {link.name}
               </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+            );
+          })}
+        </nav>
+      </div>
     </header>
   );
 }
