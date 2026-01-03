@@ -27,8 +27,8 @@ export default function HeroSection() {
         </div>
 
         {/* Right: Full-height image - Half width */}
-        <div className="hidden md:block md:w-1/2 md:absolute md:top-16 md:right-0 md:bottom-0 md:h-[calc(100vh-4rem)]">
-          <div className="relative w-full h-full animate-fade-in-right delay-300" style={{ animationFillMode: 'both' }}>
+        <div className="hidden md:block md:w-1/2 md:absolute md:top-0 md:right-0 md:bottom-0 md:h-screen rounded-bl-[150px] overflow-hidden">
+          <div className="relative w-full h-full">
             <Image
               src="/images/hero/f1.jpg"
               alt="3D Fashion Design"
