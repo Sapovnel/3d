@@ -92,22 +92,22 @@ export default function BenefitsSection() {
       {/* Sticky Container */}
       <div
         ref={containerRef}
-        className="sticky top-0 h-screen w-full overflow-hidden flex flex-col"
+        className="sticky top-0 h-screen w-full overflow-hidden flex flex-col pt-20"
       >
         {/* Header with Title and Progress */}
-        <div className="bg-gray-50 pt-16 pb-8 px-8 md:px-12">
+        <div className="bg-gray-50 pt-4 sm:pt-6 md:pt-8 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
                 Benefits
               </h2>
 
               {/* Progress Indicator */}
-              <div className="flex items-center gap-4">
-                <span className="text-sm font-medium text-gray-500">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <span className="text-xs sm:text-sm font-medium text-gray-500">
                   {activeIndex + 1} / {benefits.length}
                 </span>
-                <div className="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div className="w-32 sm:w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-black rounded-full transition-all duration-300 ease-out"
                     style={{ width: `${progress}%` }}
@@ -117,7 +117,7 @@ export default function BenefitsSection() {
             </div>
 
             {/* Progress Dots */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
               {benefits.map((_, index) => (
                 <button
                   key={index}
@@ -128,7 +128,7 @@ export default function BenefitsSection() {
                       window.scrollTo({ top: targetScroll, behavior: 'smooth' });
                     }
                   }}
-                  className={`w-12 h-1 rounded-full transition-all duration-300 ${
+                  className={`w-8 sm:w-12 h-1 rounded-full transition-all duration-300 ${
                     index === activeIndex ? 'bg-black' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to benefit ${index + 1}`}
@@ -139,11 +139,11 @@ export default function BenefitsSection() {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 px-8 md:px-12 pb-16 overflow-hidden">
+        <div className="flex-1 px-4 sm:px-6 md:px-12 pb-8 sm:pb-12 md:pb-16 overflow-hidden">
           <div className="max-w-7xl mx-auto h-full">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-16 h-full items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 h-full items-center">
               {/* Text Content */}
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center relative min-h-[180px] sm:min-h-[200px] md:min-h-0">
                 {benefits.map((benefit, index) => (
                   <div
                     key={benefit.id}
@@ -158,16 +158,16 @@ export default function BenefitsSection() {
                       pointerEvents: index === activeIndex ? 'auto' : 'none',
                     }}
                   >
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-xl font-bold">
+                    <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-6">
+                      <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black text-white flex items-center justify-center text-lg sm:text-xl font-bold">
                         {benefit.id}
                       </span>
                       <div className="h-px flex-1 bg-gray-300" />
                     </div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-6 leading-tight">
                       {benefit.title}
                     </h3>
-                    <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -175,11 +175,11 @@ export default function BenefitsSection() {
               </div>
 
               {/* Visual Content */}
-              <div className="relative h-[50vh] md:h-[60vh] min-h-[400px]">
+              <div className="relative h-[35vh] sm:h-[40vh] md:h-[60vh] min-h-[250px] sm:min-h-[300px] md:min-h-[400px]">
                 {benefits.map((benefit, index) => (
                   <div
                     key={benefit.id}
-                    className={`absolute inset-0 transition-all duration-700 ease-out rounded-2xl overflow-hidden shadow-2xl ${
+                    className={`absolute inset-0 transition-all duration-700 ease-out rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ${
                       index === activeIndex
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-95'
@@ -197,9 +197,9 @@ export default function BenefitsSection() {
                         />
                         <div className="absolute inset-0 bg-black/20" />
                         {/* Video Label */}
-                        <div className="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 bg-black/50 backdrop-blur-sm rounded-full">
-                          <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                          <span className="text-white text-sm font-medium">Video</span>
+                        <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-black/50 backdrop-blur-sm rounded-full">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full animate-pulse" />
+                          <span className="text-white text-xs sm:text-sm font-medium">Video</span>
                         </div>
                       </div>
                     ) : (
@@ -220,11 +220,11 @@ export default function BenefitsSection() {
           </div>
         </div>
 
-        {/* Scroll Hint - only show at start */}
+        {/* Scroll Hint - only show at start, hide on small mobile */}
         {activeIndex === 0 && progress < 5 && (
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-sm text-gray-500">Scroll to explore</span>
-            <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="hidden sm:flex absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
+            <span className="text-xs sm:text-sm text-gray-500">Scroll to explore</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>

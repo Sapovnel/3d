@@ -81,18 +81,22 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-linear-to-b from-gray-50 via-purple-50/20 to-blue-50/20 py-20 px-6 relative overflow-hidden">
-      {/* Decorative 3D Blobs */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+    <section className="bg-black py-20 px-6 relative overflow-hidden">
+      {/* Pattern background */}
+      <img
+        src="/images/6224739.jpg"
+        alt="Background pattern"
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+      />
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Get Started Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Request a quote, get pricing information, or schedule a demo with our team
           </p>
         </div>
@@ -101,8 +105,8 @@ export default function ContactSection() {
         <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-12 shadow-xl">
           {submitted ? (
             <div className="text-center py-12">
-              <div className="w-16 h-16 bg-linear-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">✓</span>
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">✓</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
               <p className="text-gray-600 mb-4">
@@ -111,7 +115,7 @@ export default function ContactSection() {
               <div className="flex gap-4 justify-center">
                 <div className="text-center">
                   <p className="text-sm text-gray-500">Email us at</p>
-                  <p className="text-purple-600 font-semibold">hello@virtuality.fashion</p>
+                  <p className="text-black font-semibold">hello@virtuality.fashion</p>
                 </div>
               </div>
             </div>
@@ -127,7 +131,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-colors"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-black focus:bg-white focus:outline-none transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
@@ -139,7 +143,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-colors"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-black focus:bg-white focus:outline-none transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -155,7 +159,7 @@ export default function ContactSection() {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-colors"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-black focus:bg-white focus:outline-none transition-colors"
                     placeholder="Your Brand Co."
                   />
                 </div>
@@ -165,7 +169,7 @@ export default function ContactSection() {
                     name="queryType"
                     value={formData.queryType}
                     onChange={handleChange}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-purple-500 focus:bg-white focus:outline-none transition-colors"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-black focus:bg-white focus:outline-none transition-colors"
                   >
                     <option value="pricing">Pricing Information</option>
                     <option value="demo">Schedule a Demo</option>
@@ -185,7 +189,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-colors resize-none"
+                  className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-black focus:bg-white focus:outline-none transition-colors resize-none"
                   placeholder="Tell us about your needs and how we can help..."
                 ></textarea>
               </div>
@@ -196,7 +200,7 @@ export default function ContactSection() {
                   type="checkbox"
                   id="agree"
                   required
-                  className="w-5 h-5 rounded border border-gray-300 bg-gray-50 text-purple-600 cursor-pointer mt-1"
+                  className="w-5 h-5 rounded border border-gray-300 bg-gray-50 text-black accent-black cursor-pointer mt-1"
                 />
                 <label htmlFor="agree" className="text-gray-600 text-sm cursor-pointer">
                   I agree to the privacy policy and terms of service. We&apos;ll get back to you within 24 hours.
@@ -207,14 +211,14 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Sending...' : 'Submit Query'}
               </button>
 
               {/* Help Text */}
               <p className="text-center text-gray-500 text-sm">
-                Prefer to call? Reach us at <span className="text-purple-600 font-semibold">+1 (555) 123-4567</span>
+                Prefer to call? Reach us at <span className="text-black font-semibold">+1 (555) 123-4567</span>
               </p>
             </form>
           )}
@@ -222,20 +226,20 @@ export default function ContactSection() {
 
         {/* Info Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition-shadow">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all">
             <div className="text-4xl mb-3">📧</div>
-            <h3 className="text-gray-900 font-semibold mb-2">Email</h3>
-            <p className="text-gray-600 text-sm">hello@virtuality.fashion</p>
+            <h3 className="text-white font-semibold mb-2">Email</h3>
+            <p className="text-gray-300 text-sm">hello@virtuality.fashion</p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition-shadow">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all">
             <div className="text-4xl mb-3">📱</div>
-            <h3 className="text-gray-900 font-semibold mb-2">Phone</h3>
-            <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
+            <h3 className="text-white font-semibold mb-2">Phone</h3>
+            <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition-shadow">
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all">
             <div className="text-4xl mb-3">🌍</div>
-            <h3 className="text-gray-900 font-semibold mb-2">Live Chat</h3>
-            <p className="text-gray-600 text-sm">Available 9 AM - 6 PM EST</p>
+            <h3 className="text-white font-semibold mb-2">Live Chat</h3>
+            <p className="text-gray-300 text-sm">Available 9 AM - 6 PM EST</p>
           </div>
         </div>
       </div>

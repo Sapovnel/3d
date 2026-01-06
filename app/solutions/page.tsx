@@ -153,7 +153,7 @@ export default function SolutionsPage() {
 
       {/* Solutions Grid */}
       <div className="bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-7xl mx-auto px-6 py-32">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Our Solutions
@@ -209,7 +209,7 @@ export default function SolutionsPage() {
           backgroundSize: '40px 40px'
         }} />
 
-        <div className="max-w-7xl mx-auto px-6 py-32 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-40 relative z-10">
           <div className="text-center mb-20">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">
               Our Advantage
@@ -300,7 +300,7 @@ export default function SolutionsPage() {
 
       {/* Tools Section - Enhanced */}
       <div className="bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-32">
+        <div className="max-w-7xl mx-auto px-6 py-40">
           <div className="text-center mb-20">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">
               Technology Stack
@@ -344,29 +344,33 @@ export default function SolutionsPage() {
         </div>
       </div>
 
-      {/* Get Started - Home Page Style */}
-      <div className="bg-gray-100 text-black py-32 md:py-40 relative overflow-hidden">
+      {/* Get Started - Black CTA */}
+      <div className="bg-black text-white py-32 md:py-40 relative overflow-hidden">
         {/* Pattern background */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div className="absolute inset-0 bg-white/40" />
+        <img
+          src="/images/6224739.jpg"
+          alt="Background pattern"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="max-w-7xl mx-auto px-8 md:px-12 text-center relative z-10">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
             Get Started
           </h2>
 
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Ready to transform your fashion design workflow? Let's talk.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/contact">
-              <button className="w-full sm:w-auto px-12 py-5 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 hover:scale-105 transform transition-all duration-300 text-xl shadow-lg hover:shadow-xl">
+              <button className="w-full sm:w-auto px-12 py-5 bg-white text-black rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transform transition-all duration-300 text-xl shadow-lg hover:shadow-xl">
                 Contact Us
               </button>
             </Link>
             <Link href="/team">
-              <button className="w-full sm:w-auto px-12 py-5 border-2 border-black text-black rounded-lg font-semibold hover:bg-black hover:text-white hover:scale-105 transform transition-all duration-300 text-xl">
+              <button className="w-full sm:w-auto px-12 py-5 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-black hover:scale-105 transform transition-all duration-300 text-xl">
                 View Team
               </button>
             </Link>

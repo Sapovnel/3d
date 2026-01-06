@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,31 +11,98 @@ export default function Footer() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+  ];
+
+  const socialLinks = [
+    { name: 'Instagram', href: 'https://instagram.com', icon: Instagram },
+    { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com', icon: Twitter },
+    { name: 'YouTube', href: 'https://youtube.com', icon: Youtube },
+  ];
+
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-8">
           {/* Brand */}
-          <Link href="/" className="text-xl font-bold text-gray-900">
-            Virtuality<span className="text-gray-500">.Fashion</span>
-          </Link>
+          <div className="col-span-2 sm:col-span-2 md:col-span-2">
+            <Link href="/" className="text-lg sm:text-xl font-bold text-gray-900">
+              Virtuality<span className="text-gray-500">.Fashion</span>
+            </Link>
+            <p className="mt-3 sm:mt-4 text-gray-500 text-xs sm:text-sm max-w-xs">
+              Transforming fashion design with cutting-edge 3D technology and digital solutions.
+            </p>
+            {/* Social Icons */}
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300"
+                    aria-label={social.name}
+                  >
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
 
           {/* Navigation Links */}
-          <nav className="flex gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-gray-600 hover:text-black transition-colors text-sm font-medium"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Navigation</h3>
+            <nav className="flex flex-col gap-2 sm:gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-600 hover:text-black transition-colors text-xs sm:text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-          {/* Copyright */}
-          <p className="text-gray-500 text-sm">
-            © {currentYear} Virtuality.Fashion
+          {/* Legal Links */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Legal</h3>
+            <nav className="flex flex-col gap-2 sm:gap-3">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-600 hover:text-black transition-colors text-xs sm:text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact Info */}
+          <div className="col-span-2 sm:col-span-1">
+            <h3 className="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Contact</h3>
+            <div className="flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600">
+              <p>hello@virtuality.fashion</p>
+              <p>+1 (555) 123-4567</p>
+              <p>New York, NY</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
+          <p className="text-gray-500 text-xs sm:text-sm text-center">
+            © {currentYear} Virtuality.Fashion. All rights reserved.
           </p>
         </div>
       </div>

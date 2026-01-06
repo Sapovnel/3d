@@ -48,14 +48,20 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 bg-white/50 backdrop-blur-sm px-2 py-1.5 rounded-full border border-gray-200/50 shadow-sm">
+        <nav className={`hidden md:flex items-center gap-1 px-2 py-1.5 transition-all duration-300 ${
+          scrolled
+            ? ''
+            : 'bg-white/50 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm'
+        }`}>
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-black hover:bg-white rounded-full transition-all duration-200 group relative overflow-hidden"
+                className={`flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-black transition-all duration-200 group relative overflow-hidden ${
+                  scrolled ? 'hover:bg-gray-100 rounded-lg' : 'hover:bg-white rounded-full'
+                }`}
               >
                 <Icon className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" />
                 <span>{link.name}</span>
