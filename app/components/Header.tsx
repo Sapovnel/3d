@@ -40,11 +40,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group relative z-50">
-          <div className="text-2xl tracking-tight text-black flex items-center gap-1">
-            <span className="font-light">virtuality</span>
-            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">.fashion</span>
-          </div>
+        <Link href="/" className="relative z-50">
+          <img
+            src="/images/logo.png"
+            alt="Virtuality Fashion"
+            className="h-10 sm:h-11 md:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

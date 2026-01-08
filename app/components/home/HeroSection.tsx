@@ -1,14 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-
-// Dynamically import the 3D component to avoid SSR issues
-const DressModel = dynamic(() => import('../DressModel'), {
-  ssr: false,
-  loading: () => null,
-});
 
 export default function HeroSection() {
   return (
@@ -58,41 +51,36 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Mobile: 3D Model section */}
+        {/* Mobile: Hero Image section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="block md:hidden w-full h-[50vh] min-h-[350px] relative overflow-hidden"
         >
-          {/* Black blob shape behind model */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center">
             <img
-              src="/images/blob-splatter.png"
-              alt=""
-              className="w-[80%] h-[80%] max-w-[350px] max-h-[350px] object-contain"
+              src="/images/hero.png"
+              alt="Fashion models"
+              className="h-[80%] w-auto object-contain"
             />
           </div>
-          <DressModel />
         </motion.div>
 
-        {/* Desktop: 3D Model - Half width */}
+        {/* Desktop: Hero Image - Half width */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="hidden md:block md:w-1/2 md:absolute md:top-0 md:right-0 md:bottom-0 md:h-screen rounded-bl-[150px] overflow-hidden bg-transparent"
         >
-          {/* Black blob shape behind model */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center">
             <img
-              src="/images/blob-splatter.png"
-              alt=""
-              className="w-[85%] h-[85%] max-w-[650px] max-h-[650px] object-contain"
-              style={{ transform: 'translate(5%, 0%)' }}
+              src="/images/hero.png"
+              alt="Fashion models"
+              className="h-[85%] w-auto object-contain"
             />
           </div>
-          <DressModel />
         </motion.div>
       </div>
     </section>

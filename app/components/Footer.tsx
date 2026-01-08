@@ -30,8 +30,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-2">
-            <Link href="/" className="text-lg sm:text-xl font-bold text-gray-900">
-              Virtuality<span className="text-gray-500">.Fashion</span>
+            <Link href="/">
+              <img
+                src="/images/logo.png"
+                alt="Virtuality Fashion"
+                className="h-10 sm:h-12 md:h-14 w-auto"
+              />
             </Link>
             <p className="mt-3 sm:mt-4 text-gray-500 text-xs sm:text-sm max-w-xs">
               Transforming fashion design with cutting-edge 3D technology and digital solutions.
